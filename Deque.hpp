@@ -2,6 +2,8 @@
 #define DEQUE_HPP
 
 #include "abstract_deque.hpp"
+#include <algorithm>
+#include <iterator>
 
 #define INITIAL_CAPACITY 64
 
@@ -36,6 +38,9 @@ private:
     int frontIndex;
     int rearIndex;
     int size;
+    int capacity;
+
+    void resize();
 };
 
 #include "Deque.txx"
