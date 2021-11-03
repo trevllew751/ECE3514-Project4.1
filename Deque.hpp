@@ -32,8 +32,10 @@ public:
     T back();
 
 private:
-    T items[];
-
+    T* items;
+    int frontIndex;
+    int rearIndex;
+    int size;
 };
 
 #include "Deque.txx"
