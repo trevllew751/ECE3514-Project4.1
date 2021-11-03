@@ -12,7 +12,7 @@ Deque<T>::Deque(Deque<T> &other) {
     this->size = other.size;
     this->capacity = other.capacity;
     items = new T[capacity];
-    std::copy(std::begin(other.items), std::end(other.items), std::begin(items));
+    std::copy(other.items, other.items + other.capacity, items);
 }
 
 template<typename T>
@@ -20,13 +20,21 @@ Deque<T>::~Deque() {
     delete[] items;
 }
 
-//template<typename T>
-//Deque<T> &Deque<T>::operator=(Deque rhs) {
-//    return <#initializer#>;
-//}
+template<typename T>
+Deque<T> &Deque<T>::operator=(Deque rhs) {
+    if (this != rhs) {
+        Deque<T> temp(rhs);
+        swap(*this, rhs);
+        this->frontIndex = rhs.frontIndex;
+        this->rearIndex = rhs.rearIndex;
+        this->size = rhs.size;
+        this->capacity = rhs.capacity;
+    }
+    return *this;
+}
 
 template<typename T>
-bool Deque<T>::isEmpty() {
+bool Deque<T>::isEmpty() const noexcept {
     return size == 0;
 }
 
@@ -65,7 +73,10 @@ void Deque<T>::popFront() {
 }
 
 template<typename T>
-T Deque<T>::front() {
+T Deque<T>::front() const {
+    if (isEmpty()) {
+        throw std::runtime_error("Error: Empty deque");
+    }
     return items[frontIndex];
 }
 
@@ -102,11 +113,21 @@ void Deque<T>::popBack() {
 }
 
 template<typename T>
-T Deque<T>::back() {
+T Deque<T>::back() const {
+    if (isEmpty()) {
+        throw std::runtime_error("Error: Empty deque");
+    }
     return items[rearIndex];
 }
 
 template<typename T>
 void Deque<T>::resize() {
 
+}
+
+template<typename T>
+void Deque<T>::swap(Deque &lhs, Deque &rhs) {
+    T *temp = lhs.items;
+    lhs.items = rhs.items;
+    rhs.items = temp;
 }

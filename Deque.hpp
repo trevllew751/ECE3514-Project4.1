@@ -19,19 +19,19 @@ public:
 
     Deque &operator=(Deque rhs);
 
-    bool isEmpty();
+    bool isEmpty() const noexcept;
 
     void pushFront(const T &item);
 
     void popFront();
 
-    T front();
+    T front() const;
 
     void pushBack(const T &item);
 
     void popBack();
 
-    T back();
+    T back() const;
 
 private:
     T* items;
@@ -41,6 +41,8 @@ private:
     int capacity;
 
     void resize();
+
+    void swap(Deque &lhs, Deque&rhs);
 };
 
 #include "Deque.txx"

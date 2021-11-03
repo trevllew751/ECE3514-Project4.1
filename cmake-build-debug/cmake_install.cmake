@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/Trevl/Desktop/Projects/School/ECE 3514 - Data Structures and Algorithms/Project4.1/P4.1_starter
+# Install script for directory: C:/Users/Trevl/Desktop/Projects/School/ECE 3514  - Data Structures and Algorithms/Project4.1/ECE3514-Project4.1
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/P2_1")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/Deque")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Trevl/Desktop/Projects/School/ECE 3514 - Data Structures and Algorithms/Project4.1/P4.1_starter/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Trevl/Desktop/Projects/School/ECE 3514  - Data Structures and Algorithms/Project4.1/ECE3514-Project4.1/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
