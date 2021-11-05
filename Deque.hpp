@@ -2,8 +2,6 @@
 #define DEQUE_HPP
 
 #include "abstract_deque.hpp"
-#include <algorithm>
-#include <iterator>
 
 #define INITIAL_CAPACITY 64
 

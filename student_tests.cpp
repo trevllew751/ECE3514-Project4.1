@@ -6,6 +6,8 @@ TEST_CASE("Peek at empty deque", "[deque]") {
     REQUIRE(dq.isEmpty());
     REQUIRE_THROWS_AS(dq.front(), std::runtime_error);
     REQUIRE_THROWS_AS(dq.back(), std::runtime_error);
+    REQUIRE_THROWS_AS(dq.popFront(), std::runtime_error);
+    REQUIRE_THROWS_AS(dq.popBack(), std::runtime_error);
 }
 
 TEST_CASE("Test pushBack and back", "[Deque]") {

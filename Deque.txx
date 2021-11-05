@@ -2,7 +2,7 @@
 
 template<typename T>
 Deque<T>::Deque() : frontIndex(-1), rearIndex(0), size(0), capacity(INITIAL_CAPACITY) {
-    items = new T[INITIAL_CAPACITY];
+    items = new T[INITIAL_CAPACITY + 1];
 }
 
 template<typename T>
@@ -25,10 +25,10 @@ Deque<T> &Deque<T>::operator=(Deque rhs) {
     if (this != rhs) {
         Deque<T> temp(rhs);
         swap(*this, rhs);
-        this->frontIndex = rhs.frontIndex;
-        this->rearIndex = rhs.rearIndex;
-        this->size = rhs.size;
-        this->capacity = rhs.capacity;
+        frontIndex = rhs.frontIndex;
+        rearIndex = rhs.rearIndex;
+        size = rhs.size;
+        capacity = rhs.capacity;
     }
     return *this;
 }
@@ -124,7 +124,7 @@ template<typename T>
 void Deque<T>::resize() {
     capacity *= 2;
     int newFront = capacity - frontIndex;
-    T* temp = new T[capacity];
+    T* temp = new T[capacity + 1];
     if (rearIndex != 0) {
         std::copy(items, items + rearIndex + 1, temp);
     }
