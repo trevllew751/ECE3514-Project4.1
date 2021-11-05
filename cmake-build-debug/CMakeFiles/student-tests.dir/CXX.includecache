@@ -6,23 +6,25 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Trevl/Desktop/Projects/School/ECE 3514  - Data Structures and Algorithms/Project4.1/ECE3514-Project4.1/Deque.hpp
+C:/Users/Trevl/Desktop/Projects/School/ECE 3514 - Data Structures and Algorithms/Project4.1/P4.1_starter/Deque.hpp
 abstract_deque.hpp
-C:/Users/Trevl/Desktop/Projects/School/ECE 3514  - Data Structures and Algorithms/Project4.1/ECE3514-Project4.1/abstract_deque.hpp
+C:/Users/Trevl/Desktop/Projects/School/ECE 3514 - Data Structures and Algorithms/Project4.1/P4.1_starter/abstract_deque.hpp
 algorithm
 -
 iterator
 -
+iostream
+-
 Deque.txx
-C:/Users/Trevl/Desktop/Projects/School/ECE 3514  - Data Structures and Algorithms/Project4.1/ECE3514-Project4.1/Deque.txx
+C:/Users/Trevl/Desktop/Projects/School/ECE 3514 - Data Structures and Algorithms/Project4.1/P4.1_starter/Deque.txx
 
-C:/Users/Trevl/Desktop/Projects/School/ECE 3514  - Data Structures and Algorithms/Project4.1/ECE3514-Project4.1/Deque.txx
+C:/Users/Trevl/Desktop/Projects/School/ECE 3514 - Data Structures and Algorithms/Project4.1/P4.1_starter/Deque.txx
 deque.hpp
-C:/Users/Trevl/Desktop/Projects/School/ECE 3514  - Data Structures and Algorithms/Project4.1/ECE3514-Project4.1/Deque.hpp
+C:/Users/Trevl/Desktop/Projects/School/ECE 3514 - Data Structures and Algorithms/Project4.1/P4.1_starter/Deque.hpp
 
-C:/Users/Trevl/Desktop/Projects/School/ECE 3514  - Data Structures and Algorithms/Project4.1/ECE3514-Project4.1/abstract_deque.hpp
+C:/Users/Trevl/Desktop/Projects/School/ECE 3514 - Data Structures and Algorithms/Project4.1/P4.1_starter/abstract_deque.hpp
 
-C:/Users/Trevl/Desktop/Projects/School/ECE 3514  - Data Structures and Algorithms/Project4.1/ECE3514-Project4.1/catch.hpp
+C:/Users/Trevl/Desktop/Projects/School/ECE 3514 - Data Structures and Algorithms/Project4.1/P4.1_starter/catch.hpp
 TargetConditionals.h
 -
 ciso646
@@ -398,7 +400,7 @@ string
 memory
 -
 Foundation/Foundation.h
-C:/Users/Trevl/Desktop/Projects/School/ECE 3514  - Data Structures and Algorithms/Project4.1/ECE3514-Project4.1/Foundation/Foundation.h
+C:/Users/Trevl/Desktop/Projects/School/ECE 3514 - Data Structures and Algorithms/Project4.1/P4.1_starter/Foundation/Foundation.h
 limits
 -
 set
@@ -602,9 +604,9 @@ algorithm
 cassert
 -
 
-C:/Users/Trevl/Desktop/Projects/School/ECE 3514  - Data Structures and Algorithms/Project4.1/ECE3514-Project4.1/student_tests.cpp
+C:/Users/Trevl/Desktop/Projects/School/ECE 3514 - Data Structures and Algorithms/Project4.1/P4.1_starter/student_tests.cpp
 catch.hpp
-C:/Users/Trevl/Desktop/Projects/School/ECE 3514  - Data Structures and Algorithms/Project4.1/ECE3514-Project4.1/catch.hpp
+C:/Users/Trevl/Desktop/Projects/School/ECE 3514 - Data Structures and Algorithms/Project4.1/P4.1_starter/catch.hpp
 Deque.hpp
-C:/Users/Trevl/Desktop/Projects/School/ECE 3514  - Data Structures and Algorithms/Project4.1/ECE3514-Project4.1/Deque.hpp
+C:/Users/Trevl/Desktop/Projects/School/ECE 3514 - Data Structures and Algorithms/Project4.1/P4.1_starter/Deque.hpp
 

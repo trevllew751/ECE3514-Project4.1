@@ -92,3 +92,14 @@ TEST_CASE("Test copy constructor", "[Deque]") {
     Deque<int> dq1(dq);
 
 }
+
+TEST_CASE("Test resize", "[Deque]") {
+    Deque<int> dq;
+    for (int i = 0; i < 32; i++) {
+        dq.pushBack(i);
+    }
+    for (int i = 0; i < 33; i++) {
+        dq.pushFront(i);
+    }
+    REQUIRE(dq.front() == 32);
+}

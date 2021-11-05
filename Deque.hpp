@@ -4,6 +4,7 @@
 #include "abstract_deque.hpp"
 #include <algorithm>
 #include <iterator>
+#include <iostream>
 
 #define INITIAL_CAPACITY 64
 

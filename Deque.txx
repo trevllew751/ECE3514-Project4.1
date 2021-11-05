@@ -40,7 +40,7 @@ bool Deque<T>::isEmpty() const noexcept {
 
 template<typename T>
 void Deque<T>::pushFront(const T &item) {
-    if (size + 1 == capacity) {
+    if (size == capacity) {
         resize();
     }
     if (frontIndex == -1) {
@@ -61,7 +61,7 @@ void Deque<T>::popFront() {
     }
     if (frontIndex == rearIndex) {
         frontIndex = -1;
-        rearIndex = -1;
+        rearIndex = 0;
     } else {
         if (frontIndex == capacity - 1) {
             frontIndex = 0;
@@ -82,7 +82,7 @@ T Deque<T>::front() const {
 
 template<typename T>
 void Deque<T>::pushBack(const T &item) {
-    if (size + 1 == capacity) {
+    if (size == capacity) {
         resize();
     }
     if (frontIndex == -1) {
@@ -103,7 +103,7 @@ void Deque<T>::popBack() {
     }
     if (frontIndex == rearIndex) {
         frontIndex = -1;
-        rearIndex = -1;
+        rearIndex = 0;
     } else if (rearIndex == 0) {
         rearIndex = capacity - 1;
     } else {
@@ -122,7 +122,22 @@ T Deque<T>::back() const {
 
 template<typename T>
 void Deque<T>::resize() {
-
+    capacity *= 2;
+    int newFront = capacity - frontIndex;
+    T* temp = new T[capacity];
+    if (rearIndex != 0) {
+        std::copy(items, items + rearIndex + 1, temp);
+    }
+    if (frontIndex != 0) {
+        for (int i = newFront; i < capacity; i++) {
+            temp[i] = front();
+            popFront();
+        }
+    }
+    delete [] items;
+    items = nullptr;
+    items = temp;
+    frontIndex = newFront;
 }
 
 template<typename T>
