@@ -1,4 +1,4 @@
-#include "deque.hpp"
+#include "Deque.hpp"
 
 template<typename T>
 Deque<T>::Deque() : frontIndex(-1), rearIndex(0), size(0), capacity(INITIAL_CAPACITY) {
@@ -7,10 +7,10 @@ Deque<T>::Deque() : frontIndex(-1), rearIndex(0), size(0), capacity(INITIAL_CAPA
 
 template<typename T>
 Deque<T>::Deque(Deque<T> &other) {
-    this->frontIndex = other.frontIndex;
-    this->rearIndex = other.rearIndex;
-    this->size = other.size;
-    this->capacity = other.capacity;
+    frontIndex = other.frontIndex;
+    rearIndex = other.rearIndex;
+    size = other.size;
+    capacity = other.capacity;
     items = new T[capacity];
     std::copy(other.items, other.items + other.capacity, items);
 }

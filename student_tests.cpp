@@ -90,7 +90,28 @@ TEST_CASE("Test copy constructor", "[Deque]") {
     REQUIRE(dq.back() == 4);
 
     Deque<int> dq1(dq);
+    REQUIRE(dq1.front() == 2);
+    REQUIRE(dq1.back() == 4);
+    dq1.popFront();
+    dq1.popBack();
+    REQUIRE(dq1.front() == 1);
+    REQUIRE(dq1.back() == 3);
+}
 
+TEST_CASE("Test operator=", "[Deque]") {
+    Deque<int> dq;
+    dq.pushFront(1);
+    dq.pushFront(2);
+    dq.pushBack(3);
+    dq.pushBack(4);
+
+    Deque<int> dq1 = dq;
+    REQUIRE(dq1.front() == 2);
+    REQUIRE(dq1.back() == 4);
+    dq1.popFront();
+    dq1.popBack();
+    REQUIRE(dq1.front() == 1);
+    REQUIRE(dq1.back() == 3);
 }
 
 TEST_CASE("Test resize", "[Deque]") {
