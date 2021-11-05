@@ -53,7 +53,7 @@ TEST_CASE("Test push both", "[Deque]") {
     REQUIRE(dq.front() == 2);
     REQUIRE_FALSE(dq.isEmpty());
 }
-// TODO: Fix pop methods for when the deque becomes empty
+
 TEST_CASE("Test popBack and popFront", "[Deque]") {
     Deque<int> dq;
 
